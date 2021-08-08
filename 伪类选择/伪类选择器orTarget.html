@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  a{
+    text-decoration: none;
+    color: skyblue;
+  }
+  div{
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    display: none;
+  }
+  div[id="div1"]{
+    display: block;
+  }
+  /* 代表一个特殊的元素，它的id是URI的片段标识符 */
+  :target{
+    display: block;
+  }
+  /* 
+  由于a标签的:link和:visited可以覆盖了所有a标签的状态，所以当
+  :link，:visited，:hover，:active同时出现在a标签身上时 
+  :link和:visited不能放在最后！！！
+   */
+</style>
+
+<body>
+  <a href="#div1">div1</a>
+  <a href="#div2">div2</a>
+  <a href="#div3">div3</a>
+  <div id="div1">
+      div1
+  </div>
+  <div id="div2">
+    div2
+</div>
+<div id="div3">
+  div3
+</div>
+</body>
+</html>

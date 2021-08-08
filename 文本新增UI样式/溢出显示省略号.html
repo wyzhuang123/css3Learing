@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 200px;
+      height: 200px;
+      border: 1px solid;
+      margin: 0 auto;
+      /*
+        溢出显示省略号（面试常问）
+        三段代码缺一不可
+      */
+      /* 不换行 */
+      white-space: nowrap;
+      /* 省略溢出 */
+      overflow: hidden;
+      /* ellipsis：用...代替移除部分,条件：不能是用内容撑开的div */
+      text-overflow:ellipsis;
+    }
+  </style>
+</head>
+<body>
+  <div>123123123123123123123123123123123123123123123123123123123123</div>
+</body>
+</html>

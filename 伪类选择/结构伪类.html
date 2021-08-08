@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      }
+      /*
+        相当于*：first—child
+        每个标签下的第一个子标签都给样式
+      */
+    :first-child{
+      border: 1px solid black;
+    }
+    /*
+      标签下的第一个子标签，同时必须为li标签
+    */
+    li:first-child{
+      color:orange;
+    }
+    /*
+      标签下的第一span标签
+    */
+    span:first-of-type{
+      color: tomato;
+    }
+    span:nth-last-of-type(2){
+      color: aqua;
+    }
+    /* 
+    只有一个a标签是起作用(在同一个父标签下，若处于不同的父标签，可以都呈现样式)
+     */
+    a:only-of-type{
+      color: turquoise;
+    }
+    :not(1){
+
+    }
+      /*
+      index从1开始
+      eg:
+          #app li:nth-child(i)
+          找到#app底下的所有元素，并且选中第ii个子元素，并且这个子元素必须是li，需两个条件同时满足
+          样式才能起效果
+      */
+
+    /* #app li:nth-child(1){
+      color:pink;
+    }
+    #app span:nth-child(2){
+      color: green;
+    }
+    #app li:nth-child(5){
+        color: pink;
+    } */
+
+
+    /*
+    eg:
+          #app li:nth-of-type(i)
+          找到#app底下的li元素，并选择第i个li元素
+    */
+
+
+    /* #app li:nth-of-type(3){
+        color: yellow;
+    }
+    #app span:nth-of-type(3){ */
+      /*
+      如果是从头开始数，那就是内容为2的span呈现天蓝色，但事实并未是这样
+      而是找到#app下的第3个span标签，标记为天蓝色
+      */
+
+      /* 
+      color: skyblue; } 
+    */
+  </style>
+</head>
+<body>
+  <ul id="app">
+    <li>1</li>
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <a>1</a>
+    <!-- <a>2</a> -->
+  </ul>
+</body>
+</html>

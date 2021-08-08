@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      /* 有name的div */
+      div[name]{
+        color:red;
+      }
+      /* 名字为lili的div */
+      div[name="lili"]{
+        color: aqua;
+      }
+      /* 开头是LL的div */
+      div[name^="LL"]{
+          color: green;
+      }
+      /* 结尾是DD的div */
+      div[name$="DD"]{
+        color: blue;
+      }
+  </style>
+</head>
+<body>
+ <div id="app">
+   <div name="lihua" nameii="lili">lihua</div>
+   <div name="lili">lili</div>
+   <div name="LL-lifei">lifei</div>
+   <div name="LL-baibai">baibai</div>
+   <div name="LL-momo">momo</div>
+   <div>no name</div>
+   <div name="huahua-DD">huahua-DD</div>
+   <div name="lili-DD">lili-DD</div>
+   <div name="liuliu-DD">liuliu-DD</div>
+ </div>
+</body>
+</html>

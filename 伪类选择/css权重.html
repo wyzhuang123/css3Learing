@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #stylediv{
+      /* 加important一般是解决内联样式的方法之一 */
+      border-color: green !important;
+      border-bottom:2px solid purple !important;
+      height: 220px;
+      width: 220px;
+    }
+    #id-div{
+      /* 0,1,0,0 */
+      background-color: pink;
+    }
+    .class-div{
+      /* 0,0,1,0 */
+      height: 200px;
+      width: 200px;
+      background-color:red;
+    }
+    .weilei{ 
+      height: 200px; 
+       width: 200px;
+      background-color: skyblue;
+    }
+    /* 权重:0,1,0,0 */
+    #dd{
+      background-color: orange;
+    }
+    /* 权重为0，0，1，1 */
+    div[id="dd"]{
+      width: 200px;
+      height: 200px;
+      background-color: #ccc;
+    }
+    *{
+      margin: 0;
+      padding: 0;
+      background: pink;
+    }
+  </style>
+</head>
+<body>
+  <div id="div-container">
+    <div id="dd"></div>
+  <!-- 权重为1，0，0，0 -->
+  <div style="border:1px solid #ccc" 
+   id="stylediv"></div>
+  <div class="class-div" id="id-div"></div>
+  <div class="weilei">伪类</div>
+  </div>
+  <div style="background: black;">
+    继承没有特殊性
+    <!-- 继承下来的没有特殊性，而通配符的有特殊性，
+      故显示为pink颜色 -->
+    <div>
+      我是内部div
+    </div>
+  </div>
+</body>
+</html>

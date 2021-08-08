@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			#wrap{
+				width: 400px;
+				height: 400px;
+				border: 1px solid;
+				margin: 100px auto;
+				display: flex;
+				
+				
+			}
+			#wrap > .item{
+				width: 50px;
+				height: 50px;
+				background: pink;
+				text-align: center;
+				line-height: 50px;
+				flex-grow:1;
+			}
+			#wrap .item:nth-child(1){
+				flex-grow:5;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="item">1</div>
+			<div class="item">2</div>
+			<div class="item">3</div>
+			<div class="item">4</div>
+			<div class="item">5</div>
+		</div>
+	</body>
+</html>

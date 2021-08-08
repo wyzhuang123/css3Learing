@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  /* 
+  nth-of-type以标签为中心，故会将所有class为inner的标签渲染成粉色
+   */
+  .app .inner:nth-of-type(1){
+    color: pink;
+  }
+  .app .inner:nth-child(1){
+    color: black;
+  }
+</style>
+<body>
+  <div class="app">
+    <div class="inner">div</div>
+    <a href="" class="inner">a</a>
+    <h1 class="inner">h1</h1>
+    <h2 class="inner">h2</h2>
+  </div>
+  
+</body>
+</html>

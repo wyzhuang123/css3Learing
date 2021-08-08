@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #test{
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      text-align: center;
+      line-height: 200px;
+      background-color: pink;
+      /* 
+      盒模型阴影：
+
+      box-shadow: offset-x offset-y 模糊程度 阴影面积 颜色 阴影方向(内外)
+      盒子阴影是可以叠加的,逗号隔开即可
+      
+      */
+      box-shadow: 10px 10px 20px 0px black, 
+                  20px 20px 10px 0px green,
+                  30px 30px 10px 0px purple,
+                  40px 40px 10px 0px gold;
+                  /* -10px -10px 20px 0px black, 
+                  -20px -20px 10px 0px green,
+                  -30px -30px 10px 0px purple,
+                  -40px -40px 10px 0px gold,
+                  10px -15px 20px 0px black, 
+                  20px -25px 10px 0px green,
+                  30px -35px 10px 0px purple,
+                  40px -45px 10px 0px gold,
+                  -10px 15px 20px 0px black, 
+                  -20px 25px 10px 0px green,
+                  -30px 35px 10px 0px purple,
+                  -40px 45px 10px 0px gold */
+      
+    }
+  </style>
+</head>
+<body>
+  <div id="test">123</div>
+  <img src="" alt="">
+</body>
+</html>
